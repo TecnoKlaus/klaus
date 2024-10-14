@@ -4,12 +4,64 @@
     align-items: center;
     flex-direction: column;
     width: 30rem;
-    height: 28rem;
+    height: 14rem;
     background: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    margin: 0 5rem 0 32rem;
+    margin: 0;
     padding: 1rem;
+    z-index: 2;
+}
 
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    justify-content: space-between;
+
+}
+
+.nombre-apellido {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.nombre,
+.email-input {
+    height: 2rem;
+    width: 45%;
+    background-color: rgb(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: #ededed;
+
+}
+
+.cuadro-boton {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuadro {
+    height: 7rem;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+}
+
+.boton {
+    width: 30%;
+    background-color: black;
+    border: none;
+    color: #ededed;
+    font-family: Inter;
+    border-radius: 5px;
+    height: 2rem;
 }
 
 .inputs {
@@ -79,4 +131,59 @@
 .cuerpo-mensaje label {
     color: #ededed;
     font-weight: 300;
+}
+
+.titulo-contacto {
+    font-size: 2rem;
+    font-family: Inter;
+    color: #ededed;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.bg {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    justify-content: space-around !important;
+
+}
+
+.contacto {
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .contacto {
+        width: 80%;
+    }
+
+    .formulario-contacto {
+        width: 80%;
+        height: 20rem;
+    }
+
+    .nombre-apellido {
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+    }
+
+    .nombre,
+    .email-input {
+        height: 2.5rem;
+        width: 100%;
+    }
+
+    .cuadro {
+        margin-bottom: 1rem;
+    }
+
+    .whatsapp {
+        left: 80% !important;
+    }
 }

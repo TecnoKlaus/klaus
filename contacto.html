@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
     <link rel="stylesheet" href="./contacto.css" />
+    <link rel="stylesheet" href="./clientes.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +15,8 @@
     <title>Klaus</title>
   </head>
   <body>
-    <div class="template">
+    <div class="bg">
+      <div class="overlay"></div>
       <div class="navbar">
         <div class="logo">
           <img class="img-logo" src="./images/logo.png" alt="" />
@@ -51,34 +53,60 @@
           <li><a href="./contacto.html">CONTACTO</a></li>
         </ul>
       </nav>
-
-      <div class="formulario-contacto">
-        <form class="form" id="contact-form">
-          <div class="inputs">
-            <div class="formulario-nombre">
-              <label for="">Nombre y Apellido</label>
-              <input type="text" />
+      <div class="relleno"></div>
+      <div class="contacto">
+        <h2 class="titulo-contacto">Contacto</h2>
+        <div class="formulario-contacto">
+          <form class="form" id="contact-form">
+            <div class="nombre-apellido">
+              <input
+                id="name"
+                value=""
+                class="nombre"
+                type="Nombre y Apellido"
+                name="name"
+                placeholder="Nombre y Apellido"
+                required
+              />
+              <input
+                id="email"
+                value=""
+                class="email-input"
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
             </div>
-            <div class="formulario-email">
-              <label for="">Email</label>
-              <input type="text" />
+            <div class="cuadro-boton">
+              <textarea
+                id="message"
+                value=""
+                class="cuadro"
+                type="text"
+                name="message"
+                placeholder="Mensaje"
+                required
+              ></textarea>
+              <input class="boton" type="submit" value="Enviar" />
             </div>
-          </div>
-
-          <div class="cuerpo-mensaje">
-            <label for="">Mensaje</label>
-            <textarea class="text-area" type="text"></textarea>
-          </div>
-          <input class="boton" type="submit" value="Enviar" />
-        </form>
-      </div>
-      <div class="whatsapp">
-        <a href="https://wa.me/+5492615635908" target="_blank"
-          ><img class="wsp" src="./images/wsp.png" alt=""
-        /></a>
+          </form>
+        </div>
       </div>
     </div>
+    <div class="whatsapp">
+      <a href="https://wa.me/+5492615635908" target="_blank"
+        ><img class="wsp" src="./images/wsp.png" alt=""
+      /></a>
+    </div>
     <script src="./scripts.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "TiAviVLDdqRREAWed",
+        });
+      })();
+    </script>
     <script type="text/javascript">
       window.onload = function () {
         document
@@ -86,7 +114,7 @@
           .addEventListener("submit", function (event) {
             event.preventDefault();
             // these IDs from the previous steps
-            emailjs.sendForm("service_juc5nb3", "template_88g215o", this).then(
+            emailjs.sendForm("service_o3g7nsf", "template_k0qexc1", this).then(
               () => {
                 alert("¡Enviado con éxito!");
               },

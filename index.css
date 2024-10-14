@@ -28,6 +28,7 @@ h3 {
     background-color: #ffffff;
     position: fixed;
     top: 0;
+    left: 0;
 }
 
 .img-logo {
@@ -40,6 +41,7 @@ h3 {
     align-items: center;
     justify-content: space-around;
     margin: 0 0 4rem 0;
+    text-align: center;
 }
 
 .menu-button {
@@ -57,7 +59,7 @@ h3 {
     background-color: black;
     opacity: 0.8;
     background-repeat: repeat-y;
-    height: 37.95rem;
+    height: 48rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -107,6 +109,7 @@ h3 {
 }
 
 @media only screen and (max-width: 768px) {
+
     .template {
         background-size: contain;
         background-repeat: repeat;

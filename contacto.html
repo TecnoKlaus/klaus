@@ -12,6 +12,15 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=mail"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=call"
+    />
     <title>Klaus</title>
   </head>
   <body>
@@ -88,9 +97,39 @@
                 placeholder="Mensaje"
                 required
               ></textarea>
-              <input class="boton" type="submit" value="Enviar" />
             </div>
+            <input class="boton" type="submit" value="Enviar" />
           </form>
+        </div>
+
+        <div class="datos">
+          <div class="contenedor-correo">
+            <h3 style="font-size: 1.5rem">Email</h3>
+            <div class="dato">
+              <img src="./images/mail.svg" alt="" />
+              <a style="text-decoration: none; color: #ededed" href=""
+                ><h4 class="correo">abonino@klaus-ti.com.ar</h4></a
+              >
+            </div>
+          </div>
+          <div class="divisor"></div>
+          <div class="contenedor-telefono">
+            <h3 style="font-size: 1.5rem">Teléfono</h3>
+            <div class="dato">
+              <span
+                class="material-symbols-outlined"
+                style="color: #ededed; font-size: 2rem; align-self: center"
+              >
+                call
+              </span>
+              <a
+                style="text-decoration: none; color: #ededed"
+                href="https://wa.me/+5492615635908"
+                target="_blank"
+                ><h4 class="telefono">+549 261 5635908</h4></a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -100,6 +139,10 @@
       /></a>
     </div>
     <script src="./scripts.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script type="text/javascript">
       (function () {
         emailjs.init({

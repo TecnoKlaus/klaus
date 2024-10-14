@@ -15,6 +15,7 @@
 .form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 85%;
     height: 100%;
     justify-content: space-between;
@@ -48,10 +49,11 @@
 
 .cuadro {
     height: 7rem;
-    width: 100%;
+    width: 360px;
     background-color: rgb(0, 0, 0, 0.8);
     border: none;
     border-radius: 5px;
+    color: #ededed;
 }
 
 .boton {
@@ -61,7 +63,7 @@
     color: #ededed;
     font-family: Inter;
     border-radius: 5px;
-    height: 2rem;
+    height: 3rem;
 }
 
 .inputs {
@@ -134,7 +136,7 @@
 }
 
 .titulo-contacto {
-    font-size: 2rem;
+    font-size: 40px;
     font-family: Inter;
     color: #ededed;
     font-weight: 500;
@@ -156,10 +158,43 @@
     align-items: center;
 }
 
+.contenedor-correo,
+.contenedor-telefono {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20rem;
+}
+
+.telefono,
+.correo {
+    margin-left: 1rem;
+}
+
+.datos {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.dato {
+    display: flex;
+}
+
+.divisor {
+
+    height: 5rem;
+    width: 0;
+    color: #ededed;
+    border: solid 1px #ededed
+}
+
 @media only screen and (max-width: 768px) {
 
     .contacto {
         width: 80%;
+        margin-top: 5rem;
     }
 
     .formulario-contacto {
@@ -181,9 +216,34 @@
 
     .cuadro {
         margin-bottom: 1rem;
+        width: 180px;
     }
 
     .whatsapp {
         left: 80% !important;
+    }
+
+    .datos {
+        flex-direction: column;
+    }
+
+    .divisor {
+        width: 10rem;
+        height: 0;
+        margin: 2rem;
+    }
+
+    .bg {
+        background-size: contain !important;
+        height: 57.95rem !important;
+    }
+
+    .overlay {
+        height: 65rem !important;
+    }
+
+    .boton {
+        height: 5rem;
+        width: 50%;
     }
 }
